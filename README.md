@@ -9,3 +9,7 @@
 
 - Added Glass effect and changed the background color.
 - Added temporary lorem paragraph.
+
+## [2.0] - 23/05/2023
+
+- New design added.
