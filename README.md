@@ -13,3 +13,7 @@
 ## [2.0] - 23/05/2023
 
 - New design added.
+
+## [2.0.1] - 26/05/2023
+
+- Minor adjustments were made.
