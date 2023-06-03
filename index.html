@@ -31,7 +31,7 @@
             <div class="header-content">
                 <h4 class="header-subtitle">Hello, I am</h4>
                 <h1 class="header-title">Enes</h1>
-                <h6 class="header-mono">Software Developer & Mechatronics Engineer</h6>
+                <h6 class="header-mono"><span class="type-text"></span></h6>
             </div>
         </div>
     </header>
@@ -75,7 +75,7 @@
             <div class="col-lg-4 about-card">
                 <h3 class="font-weight-light">Who am I ?</h3>
                 <span class="line mb-5"></span>
-                <h5 class="mb-3">Software Developer & Mechatronics Engineer</h5>
+                <h5 class="mb-3">Software Developer <br> & Mechatronics Engineer</h5>
                 <p class="mt-20">I have developed myself in different areas in software and I continue to do so. I am
                     also a Mechatronics engineering undergraduate program student.</p>
                 <!-- <button class="btn btn-outline-danger"><i class="icon-down-circled2 "></i>Download My CV</button> -->
@@ -389,6 +389,17 @@
             </p>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('.type-text', {
+            strings: ['Software Developer', 'Mechatronics Engineer'],
+            typeSpeed: 100,
+            backSpeed: 100,
+            loop: true,
+            fadeOut: false,
+        });
+    </script>
 
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>

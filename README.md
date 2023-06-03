@@ -17,3 +17,7 @@
 ## [2.0.1] - 26/05/2023
 
 - Minor adjustments were made.
+
+## [2.0.2] - 03/06/2023
+
+- Typed script added to homepage.
