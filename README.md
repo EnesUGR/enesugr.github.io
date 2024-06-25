@@ -1,4 +1,4 @@
-[![Development Site Status](https://api.netlify.com/api/v1/badges/4200a37a-7d09-44f4-ac84-e6504525b30a/deploy-status)](https://app.netlify.com/sites/enesugr-dev/deploys)
+Development Site Status - [![Development Site Status](https://api.netlify.com/api/v1/badges/4200a37a-7d09-44f4-ac84-e6504525b30a/deploy-status)](https://app.netlify.com/sites/enesugr-dev/deploys)
 
 ## [2.0.3] - 25/06/2024
 
