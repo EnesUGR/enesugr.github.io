@@ -1,5 +1,9 @@
 Development Site Status - [![Development Site Status](https://api.netlify.com/api/v1/badges/4200a37a-7d09-44f4-ac84-e6504525b30a/deploy-status)](https://app.netlify.com/sites/enesugr-dev/deploys)
 
+## [3.1.0] - 10/11/2025
+
+- Multilingual support and language switcher have been added to the portfolio site.
+
 ## [3.0.1] - 02/11/2025
 
 - Improvements have been made for mobile-friendly design.

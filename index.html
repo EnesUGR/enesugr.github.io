@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Enes Ugur | Portfolio</title>
+  <title id="web-title">Enes Ugur | Portfolio</title>
   <meta name="description" content="Enes Ugur | About Me" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,12 +28,22 @@
       </a>
 
       <nav class="spacer menu" id="menu">
-        <a href="#about">About</a>
-        <a href="#fields">My Fields</a>
-        <a href="#resume">Resume</a>
+        <a href="#about" id="nav-about">About</a>
+        <a href="#fields" id="nav-fields">My Fields</a>
+        <a href="#resume" id="nav-resume">Resume</a>
       </nav>
 
-      <a href="#contact" class="cta">Contact Me</a>
+      <!-- dil seçimi -->
+      <div class="lang-switch">
+        <button class="lang-btn lang-active" data-lang="en">
+          <img src="assets/flags/gb.svg" alt="English" />
+        </button>
+        <button class="lang-btn" data-lang="tr">
+          <img src="assets/flags/tr.svg" alt="Türkçe" />
+        </button>
+      </div>
+
+      <a href="#contact" id="nav-contact" class="cta">Contact Me</a>
       <button class="menu-btn" id="menuBtn" aria-label="Menüyü aç/kapat">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M3 6h18M3 12h18M3 18h18" />
@@ -52,8 +62,8 @@
           <span class="cursor" aria-hidden="true"></span>
         </div>
         <div class="actions">
-          <a class="btn primary" href="#about">My About</a>
-          <a class="btn" href="#resume" id="dlcv-top">Download CV</a>
+          <a class="btn primary" href="#fields" id="btn-fields">View My Fields</a>
+          <a class="btn" href="#resume" id="btn-cv-top">Download CV</a>
         </div>
       </div>
       <div class="hero-art" role="img" aria-label="Geometric blue background"></div>
@@ -80,8 +90,8 @@
 
           <div>
             <h3>Enes</h3>
-            <div class="muted">Mechatronics Engineer</div>
-            <p style="margin:8px 0 0; text-align:justify;">
+            <div class="muted" id="about-role">Mechatronics Engineer</div>
+            <p id="about-text" style="margin:8px 0 0; text-align:justify;">
               I'm Enes, a senior Mechatronics Engineering student with a passion for robotics,
               automation, and software development. I'll be graduating in 2026. My interests include
               software-focused projects. From robotic arm simulations to embedded systems, I enjoy
@@ -104,44 +114,50 @@
       <div class="grid">
         <article class="card">
           <span class="icon" aria-hidden="true">🐍</span>
-          <h4>Python Programming</h4>
-          <p>I develop algorithms, simulation tools, and automation scripts using libraries such as NumPy, SciPy, and
+          <h4 id="field-python">Python Programming</h4>
+          <p id="field-python-content">I develop algorithms, simulation tools, and automation scripts using libraries
+            such as NumPy, SciPy, and
             Open3D for robotics, data analysis, and system modeling. I also develop database operations and desktop
             applications using PyQt and PySide.</p>
         </article>
 
         <article class="card">
           <span class="icon" aria-hidden="true">📱</span>
-          <h4>Mobile Programming</h4>
-          <p>Designing and developing cross-platform mobile applications with Flutter. Focused on creating efficient,
+          <h4 id="field-mobile">Mobile Programming</h4>
+          <p id="field-mobile-content">Designing and developing cross-platform mobile applications with Flutter. Focused
+            on creating efficient,
             modern, and user-friendly interfaces for engineering and productivity tools.</p>
         </article>
 
         <article class="card">
           <span class="icon" aria-hidden="true">⚡</span>
-          <h4>PLC Programming</h4>
-          <p>Programming industrial automation systems with Siemens PLCs using TIA Portal. Experienced in ladder logic
+          <h4 id="field-plc">PLC Programming</h4>
+          <p id="field-plc-content">Programming industrial automation systems with Siemens PLCs using TIA Portal.
+            Experienced in ladder logic
             (LAD) and structured control for process control and factory automation.</p>
         </article>
 
         <article class="card">
           <span class="icon" aria-hidden="true">📐</span>
-          <h4>CAD/CAM</h4>
-          <p>Creating 3D mechanical designs, assemblies, and manufacturing simulations using SolidWorks, CATIA, and
+          <h4 id="field-cad">CAD/CAM</h4>
+          <p id="field-cad-content">Creating 3D mechanical designs, assemblies, and manufacturing simulations using
+            SolidWorks, CATIA, and
             Mastercam. Combining design precision with manufacturability.</p>
         </article>
 
         <article class="card">
           <span class="icon" aria-hidden="true">🤖</span>
-          <h4>Robotics</h4>
-          <p>Designing and simulating robotic systems with a focus on kinematics, control, and automation. Experienced
+          <h4 id="field-robotics">Robotics</h4>
+          <p id="field-robotics-content">Designing and simulating robotic systems with a focus on kinematics, control,
+            and automation. Experienced
             in building URDF models, forward/inverse kinematics, and motion visualization.</p>
         </article>
 
         <article class="card">
           <span class="icon" aria-hidden="true">🧩</span>
-          <h4>Embedded Systems</h4>
-          <p>Designing and programming embedded systems using Arduino microcontrollers. Focused on sensor integration,
+          <h4 id="field-embedded">Embedded Systems</h4>
+          <p id="field-embedded-content">Designing and programming embedded systems using Arduino microcontrollers.
+            Focused on sensor integration,
             real-time control, and communication between hardware and software layers for automation and robotics
             applications.</p>
         </article>
@@ -152,7 +168,8 @@
     <section id="resume" aria-labelledby="resume-title">
       <div class="cta-wrap">
         <h3 id="resume-title">My Resume</h3>
-        <p class="muted">To learn more about my experience and qualifications, download my CV which includes detailed
+        <p class="muted" id="resume-text">To learn more about my experience and qualifications, download my CV which
+          includes detailed
           project history and technical skills.</p>
         <div class="actions" style="justify-content:center;">
           <a class="btn primary" id="dlcv-bot" href="assets/CV_EnesUgur.pdf" download="CV_EnesUgur.pdf">Download My
@@ -165,7 +182,7 @@
     <section id="contact" aria-labelledby="contact-title">
       <h2 class="section-title" id="contact-title">Contact</h2>
       <div class="contact-box">
-        <p class="contact-text">Let’s get in touch!</p>
+        <p class="contact-text" id="contact-text">Let’s get in touch!</p>
         <a href="mailto:ugurenes.tr@gmail.com" class="contact-mail">
           <i class="fa-solid fa-envelope"></i> ugurenes.tr@gmail.com
         </a>
@@ -184,12 +201,12 @@
 
   <footer>
     <div class="container foot">
-      <small>© 2023 Created by Enes Ugur<br>All Rights Reserved</small>
+      <small id="footer-copy">© 2025 Created by Enes Ugur<br>All Rights Reserved</small>
       <div class="footer-links">
-        <a href="#top">Home</a>
-        <a href="#about">About</a>
-        <a href="#fields">My Fields</a>
-        <a href="#resume">Resume</a>
+        <a href="#top" id="footer-home">Home</a>
+        <a href="#about" id="footer-about">About</a>
+        <a href="#fields" id="footer-fields">My Fields</a>
+        <a href="#resume" id="footer-resume">Resume</a>
       </div>
     </div>
   </footer>
