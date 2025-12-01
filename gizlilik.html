@@ -1,81 +1,407 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
     <title>Gizlilik Politikası</title>
+
+    <style>
+        :root {
+            --bg: #080b11;
+            --bg-elevated: #101521;
+            --accent: #3b82f6;
+            --accent-soft: rgba(59, 130, 246, 0.15);
+            --text-main: #f9fafb;
+            --text-muted: #9ca3af;
+            --border-subtle: #1f2937;
+            --danger: #f97373;
+            --radius-lg: 14px;
+            --radius-pill: 999px;
+            --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.45);
+            --max-width: 880px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            min-height: 100%;
+            background: radial-gradient(circle at top, #050812 0%, #020617 55%, #000000 100%);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            color: var(--text-main);
+            line-height: 1.6;
+            background: transparent;
+        }
+
+        .full-header {
+            width: 100%;
+            padding: 40px 0 32px;
+            background: transparent;
+            border-bottom: none;
+            box-shadow: none;
+        }
+
+        .header-inner {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        .full-header h1 {
+            font-size: clamp(30px, 4vw, 38px);
+            margin-top: 8px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .full-header .subtitle {
+            max-width: 760px;
+            font-size: 15px;
+            color: var(--text-muted);
+        }
+
+        .page-wrapper {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 32px 16px 40px;
+        }
+
+        .badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 12px;
+            border-radius: var(--radius-pill);
+            font-size: 12px;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            background: var(--accent-soft);
+            color: var(--accent);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+        }
+
+        .badge-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 999px;
+            background: var(--accent);
+        }
+
+        .updated-at {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        main {
+            background: linear-gradient(145deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.96));
+            border-radius: 24px;
+            padding: 24px 18px 22px;
+            border: 1px solid rgba(148, 163, 184, 0.24);
+            box-shadow: var(--shadow-soft);
+            backdrop-filter: blur(14px);
+        }
+
+        @media (min-width: 768px) {
+            main {
+                padding: 28px 26px 24px;
+            }
+        }
+
+        .section {
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .section:last-of-type {
+            border-bottom: none;
+            padding-bottom: 4px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            font-size: 15px;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        ul,
+        ol {
+            padding-left: 20px;
+            margin: 6px 0 4px;
+            font-size: 15px;
+            color: var(--text-main);
+        }
+
+        li {
+            margin-bottom: 4px;
+        }
+
+        .highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .muted {
+            color: var(--text-muted);
+        }
+
+        .pill-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 6px;
+        }
+
+        .pill {
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: var(--radius-pill);
+            border: 1px solid rgba(148, 163, 184, 0.45);
+            color: var(--text-muted);
+        }
+
+        .contact-box {
+            margin-top: 8px;
+            padding: 10px 12px;
+            border-radius: var(--radius-lg);
+            border: 1px dashed rgba(156, 163, 175, 0.6);
+            background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.17), transparent 55%);
+            font-size: 14px;
+        }
+
+        .contact-box a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        .danger-note {
+            margin-top: 6px;
+            font-size: 13px;
+            color: var(--danger);
+        }
+
+        footer {
+            margin-top: 14px;
+            font-size: 12px;
+            color: var(--text-muted);
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Gizlilik Politikası</h1>
-    <p>Son güncellenme: 25/04/2024</p>
-    <p>
-        Güvenliğiniz bizim için önemli. Bu sebeple bizimle paylaşacağınız kişisel verileriz hassasiyetle korunmaktadır.
-    </p>
-    <p>
-        Biz, Enes Uğur, veri sorumlusu olarak, bu gizlilik ve kişisel verilerin korunması politikası ile,
-        hangi kişisel verilerinizin hangi amaçla işleneceği, işlenen verilerin kimlerle ve neden paylaşılabileceği,
-        veri işleme yöntemimiz ve hukuki sebeplerimiz ile; işlenen verilerinize ilişkin haklarınızın neler
-        olduğu hususunda sizleri aydınlatmayı amaçlıyoruz.
-    </p>
-    <h2>Toplanan Kişisel Verileriniz, Toplanma Yöntemi ve Hukuki Sebebi</h2>
-    <p>
-        Kimlik, (isim, soy isim, doğum tarihi gibi) iletişim, (adres, e-posta adresi, telefon, IP, konum gibi)
-        özlük, sosyal medya, finans bilgileriniz ile görsel ve işitsel kayıtlarınız tarafımızca,
-        çerezler (cookies) vb. teknolojiler vasıtasıyla, otomatik veya otomatik olmayan yöntemlerle
-        ve bazen de analitik sağlayıcılar, reklam ağları, arama bilgi sağlayıcıları,
-        teknoloji sağlayıcıları gibi üçüncü taraflardan elde edilerek, kaydedilerek,
-        depolanarak ve güncellenerek, aramızdaki hizmet ve sözleşme ilişkisi çerçevesinde
-        ve süresince, meşru menfaat işleme şartına dayanılarak işlenecektir.
-    </p>
-    <h2>Kişisel Verilerinizin İşlenme Amacı</h2>
-    <p>
-        Bizimle paylaştığınız kişisel verileriniz; hizmetlerimizden faydalanabilmeniz
-        amacıyla sizlerle sözleşmeler kurabilmek, sunduğumuz hizmetlerin gerekliliklerini
-        en iyi şekilde ve aramızdaki sözleşmelere uygun olarak yerine getirebilmek,
-        bu sözleşmelerden doğan haklarınızın tarafınızca kullanılmasını sağlayabilmek,
-        ürün ve hizmetlerimizi, ihtiyaçlarınız doğrultusunda geliştirebilmek ve bu
-        gelişmelerden sizleri haberdar edebilmek, ayrıca sizleri daha geniş kapsamlı hizmet
-        sağlayıcıları ile yasal çerçeveler içerisinde buluşturabilmek ve kanundan doğan
-        zorunlulukların (kişisel verilerin talep halinde adli ve idari makamlarla paylaşılması)
-        yerine getirilebilmesi amacıyla, sözleşme ve hizmet süresince, amacına uygun ve ölçülü bir
-        şekilde işlenecek ve güncellenecektir.
-    </p>
-    <h2>Toplanan Kişisel Verilerin Kimlere ve Hangi Amaçlarla Aktarılabileceği</h2>
-    <p>
-        Bizimle paylaştığınız kişisel verileriniz; faaliyetlerimizi yürütmek üzere hizmet
-        aldığımız ve/veya verdiğimiz, sözleşmesel ilişki içerisinde bulunduğumuz,
-        iş birliği yaptığımız, yurt içi ve yurt dışındaki 3. şahıslar ile kurum ve
-        kuruluşlara ve talep halinde adli ve idari makamlara, gerekli teknik ve idari
-        önlemler alınması koşulu ile aktarılabilecektir.
-    </p>
-    <h2>Kişisel Verileri İşlenen Kişi Olarak Haklarınız</h2>
-    <p>KVKK madde 11 uyarınca herkes, veri sorumlusuna başvurarak aşağıdaki haklarını kullanabilir:</p>
-    <ol type="a">
-        <li>Kişisel veri işlenip işlenmediğini öğrenme,</li>
-        <li>Kişisel verileri işlenmişse buna ilişkin bilgi talep etme,</li>
-        <li>Kişisel verilerin işlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme,</li>
-        <li>Yurt içinde veya yurt dışında kişisel verilerin aktarıldığı üçüncü kişileri bilme,</li>
-        <li>Kişisel verilerin eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini isteme,</li>
-        <li>Kişisel verilerin silinmesini veya yok edilmesini isteme,</li>
-        <li>(e) ve (f) bentleri uyarınca yapılan işlemlerin, kişisel verilerin aktarıldığı üçüncü kişilere
-            bildirilmesini isteme,</li>
-        <li>İşlenen verilerin münhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle kişinin kendisi
-            aleyhine bir sonucun ortaya çıkmasına itiraz etme,</li>
-        <li>Kişisel verilerin kanuna aykırı olarak işlenmesi sebebiyle zarara uğraması hâlinde zararın giderilmesini
-            talep etme, haklarına sahiptir.</li>
-    </ol>
-    <p>Yukarıda sayılan haklarınızı kullanmak üzere eugurx@gmail.com üzerinden bizimle iletişime geçebilirsiniz.</p>
-    <h2>İletişim</h2>
-    <p>
-        Sizlere talepleriniz doğrultusunda hizmet sunabilmek amacıyla, sadece gerekli olan kişisel verilerinizin,
-        işbu gizlilik ve kişisel verilerin işlenmesi politikası uyarınca işlenmesini, kabul edip etmemek hususunda
-        tamamen özgürsünüz. Uygulamayı kullanmaya devam ettiğiniz takdirde, kabul etmiş olduğunuz tarafımızca
-        varsayılacaktır. Şayet kabul etmiyorsanız, lütfen uygulamayı tüm cihazlarınızdan kaldırınız. Ayrıntılı bilgi
-        için bizimle eugurx@gmail.com e-mail adresi üzerinden iletişime geçmekten lütfen çekinmeyiniz.
-    </p>
+
+    <header class="full-header">
+        <div class="header-inner">
+
+            <div class="badge-row">
+                <div class="badge">
+                    <span class="badge-dot"></span>
+                    Gizlilik Politikası
+                </div>
+                <span class="updated-at">Son güncelleme: <strong>01.12.2025</strong></span>
+            </div>
+
+            <h1>Verilerinizin Güvenliği Bizim İçin Önemli</h1>
+
+            <p class="subtitle">
+                Bu gizlilik politikası, <strong>Enes Uğur</strong> tarafından geliştirilen mobil ve web tabanlı
+                yazılımlar,
+                internet siteleri ve diğer dijital hizmetler (bundan sonra kısaca <span
+                    class="highlight">“Uygulama”</span>
+                olarak anılacaktır) kapsamındaki kişisel veri işleme faaliyetlerini açıklar.
+                <br><br>
+                Farklı projeler ve uygulamalar için, gerektiğinde bu metne ek olarak uygulama içi bilgilendirme
+                ekranları
+                veya ek şartlar da gösterilebilir. Bu temel çerçeve, tüm uygulamalar için genel gizlilik esaslarını
+                tanımlar.
+            </p>
+
+        </div>
+    </header>
+
+    <div class="page-wrapper">
+
+        <main>
+            <section class="section">
+                <h2>1. Veri Sorumlusu</h2>
+                <p>
+                    İşbu metin kapsamında <span class="highlight">veri sorumlusu</span> sıfatıyla hareket eden kişi
+                    <strong>Enes Uğur</strong>’dur. Kişisel verilerinizin işlenmesine ilişkin tüm sorumluluk ve
+                    yükümlülükler,
+                    6698 sayılı Kişisel Verilerin Korunması Kanunu (<strong>KVKK</strong>) ve ilgili mevzuat
+                    çerçevesinde
+                    yerine getirilmektedir.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>2. Toplanan Kişisel Veriler ve Toplanma Yöntemi</h2>
+                <p>
+                    Uygulamalar ve internet siteleri üzerinden, kullanım senaryosuna göre aşağıdaki veri kategorileri (hepsi veya bazıları)
+                    online ya da lokal olarak işlenebilmektedir:
+                </p>
+                <ul>
+                    <li>Kimlik bilgileri (örneğin; ad, soyad)</li>
+                    <li>İletişim bilgileri (örneğin; e-posta, telefon, IP bilgisi)</li>
+                    <li>Kullanım verileri (oturum bilgileri, işlem geçmişi, tercih ayarları)</li>
+                    <li>Cihaz ve teknik bilgiler (tarayıcı, işletim sistemi, cihaz modeli vb.)</li>
+                    <li>Görsel ve işitsel kayıtlar (profil görselleri veya ilettiğiniz medya)</li>
+                </ul>
+                <p>
+                    Bu veriler; uygulama içi formlar, kayıt ekranları, cihaz izinleri, çerezler
+                    (cookies), analiz araçları veya üçüncü taraf hizmet sağlayıcıları
+                    aracılığıyla otomatik ya da kısmen otomatik yöntemlerle toplanabilir.
+                </p>
+                <p class="muted">
+                    Hukuki sebep: Sözleşmenin kurulması ve ifası, hukuki yükümlülüklerin yerine getirilmesi,
+                    meşru menfaatler ve gerekli durumlarda açık rızanız.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>3. Kişisel Verilerinizin İşlenme Amaçları</h2>
+                <p>
+                    Kişisel verileriniz, uygulamaya bağlı olarak aşağıdaki genel amaçlarla işlenebilir:
+                </p>
+                <ul>
+                    <li>Hizmetlerin sunulması, çalıştırılması ve iyileştirilmesi</li>
+                    <li>Hesap/oturum yönetimi ve kullanıcı doğrulama işlemleri</li>
+                    <li>Teknik sorunların tespiti, güvenlik ve performansın artırılması</li>
+                    <li>Güncelleme, duyuru veya bilgilendirme mesajlarının iletilmesi</li>
+                    <li>Resmi makam taleplerinin yerine getirilmesi</li>
+                    <li>Kullanıcı deneyiminin geliştirilmesi için analitik çalışmalar yapılması</li>
+                </ul>
+
+                <div class="pill-row">
+                    <div class="pill">Hizmet Sunumu</div>
+                    <div class="pill">Güvenlik</div>
+                    <div class="pill">Analiz &amp; Geliştirme</div>
+                    <div class="pill">Yasal Yükümlülükler</div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>4. Çerezler (Cookies) ve Benzeri Teknolojiler</h2>
+                <p>
+                    Uygulamalar ve internet siteleri, kullanıcı deneyimini geliştirmek, güvenliği sağlamak ve analiz
+                    yapmak amacıyla çerezler kullanabilir. İsterseniz çerez ayarlarınızı tarayıcınız üzerinden
+                    yönetebilir veya çerezleri tamamen devre dışı bırakabilirsiniz.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>5. Kişisel Verilerin Aktarıldığı Taraflar</h2>
+                <p>
+                    Kişisel verileriniz yalnızca aşağıdaki kişi ve kuruluşlarla, gerekli güvenlik önlemleri alınarak mecburi
+                    paylaşılabilir:
+                </p>
+                <ul>
+                    <li>Yurt içi / yurt dışı altyapı ve teknoloji hizmet sağlayıcıları,</li>
+                    <li>Hukuken yetkili kamu kurum ve kuruluşları,</li>
+                    <li>Hukuki veya teknik danışmanlık hizmeti alınan üçüncü kişiler.</li>
+                </ul>
+                <p class="muted">
+                    Aktarım işlemleri, KVKK ve ilgili mevzuata uygun şekilde, amaçla sınırlı olarak gerçekleştirilir.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>6. Veri Saklama Süresi</h2>
+                <p>
+                    Eğer varsa saklanan kişisel verileriniz mevzuatta öngörülen süre boyunca veya işleme amacı için gerekli olduğu süre
+                    boyunca tutulur. Süre sona erdiğinde verileriniz silinir, anonim hale getirilir veya yok edilir.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>7. KVKK Kapsamındaki Haklarınız</h2>
+                <p>
+                    KVKK’nın 11. maddesi uyarınca aşağıdaki haklara sahipsiniz:
+                </p>
+                <ol type="a">
+                    <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+                    <li>İşlenmişse buna ilişkin bilgi talep etme</li>
+                    <li>Amacına uygun kullanılıp kullanılmadığını öğrenme</li>
+                    <li>Aktarıldığı üçüncü kişileri bilme</li>
+                    <li>Eksik/yanlış işlendiyse düzeltilmesini isteme</li>
+                    <li>Silinmesini veya yok edilmesini isteme</li>
+                    <li>Bu işlemlerin üçüncü kişilere bildirilmesini isteme</li>
+                    <li>Otomatik analiz sonucu aleyhinize bir durum oluşursa itiraz etme</li>
+                </ol>
+            </section>
+
+            <section class="section">
+                <h2>8. İletişim ve Başvuru Yöntemi</h2>
+                <p>
+                    KVKK kapsamındaki haklarınız veya veri işleme süreçlerine ilişkin sorularınız için aşağıdaki e-posta
+                    adresi üzerinden ulaşabilirsiniz:
+                </p>
+
+                <div class="contact-box">
+                    <strong>E-posta:</strong><br>
+                    <a href="mailto:ugurenes.tr@gmail.com">ugurenes.tr@gmail.com</a>
+                </div>
+
+                <p class="danger-note">
+                    Uygulamaları kullanmaya devam etmeniz, bu gizlilik politikasını kabul ettiğiniz anlamına gelir.
+                    Kabul etmiyorsanız ilgili uygulamayı kullanmayı bırakabilir ve verilerinizin silinmesini talep edebilirsiniz.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>9. Politika’da Yapılabilecek Değişiklikler</h2>
+                <p>
+                    Bu gizlilik politikası zaman zaman güncellenebilir. Güncelleme durumunda son güncelleme tarihi
+                    revize edilerek yeni metin erişiminize sunulur. Değişikleri izlemeniz ve kabul etmeniz sizin sorumluluğunuzdadır.
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            &copy; <span id="year"></span> Enes Uğur • Tüm hakları saklıdır.
+        </footer>
+
+    </div>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
 </body>
 
 </html>
