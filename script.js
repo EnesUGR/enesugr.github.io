@@ -3,7 +3,7 @@
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
   const byId = (id) => document.getElementById(id);
 
-  // DİLLER
+  // ÇEVİRİLER
   const translations = {
     en: {
       'nav-about': 'About',
@@ -27,7 +27,7 @@
       'field-cad': 'CAD/CAM',
       'field-robotics': 'Robotics',
       'field-embedded': 'Embedded Systems',
-      
+
       'field-python-content': 'I develop algorithms, simulation tools, and automation scripts using libraries such as NumPy, SciPy, and Open3D for robotics, data analysis, and system modeling. I also develop database operations and desktop applications using PyQt and PySide.',
       'field-mobile-content': 'Designing and developing cross-platform mobile applications with Flutter. Focused on creating efficient, modern, and user-friendly interfaces for engineering and productivity tools.',
       'field-plc-content': 'Programming industrial automation systems with Siemens PLCs using TIA Portal. Experienced in ladder logic (LAD) and structured control for process control and factory automation.',
@@ -39,6 +39,7 @@
       'resume-text':
         'To learn more about my experience and qualifications, download my CV which includes detailed project history and technical skills.',
       'btn-cv-bottom': 'Download My CV',
+      'btn-cv-preview': 'Preview CV',
 
       'contact-title': 'Contact',
       'contact-text': "Let’s get in touch!",
@@ -84,11 +85,12 @@
       'resume-text':
         'Deneyimlerim ve yetkinliklerim hakkında daha fazla bilgi edinmek için; projelerimi ve teknik becerilerimi içeren CV\'mi indirebilirsiniz.',
       'btn-cv-bottom': 'CV\'mi İndir',
+      'btn-cv-preview': 'Önizle',
 
       'contact-title': 'İletişim',
       'contact-text': 'Benimle iletişime geç!',
 
-      'footer-copy': '© 2025 Enes Uğur tarafından tasarlandı\nTüm hakları saklıdır',
+      'footer-copy': '© 2025 Enes Uğur\nTüm hakları saklıdır',
       'footer-home': 'Ana Sayfa',
       'footer-about': 'Hakkımda',
       'footer-fields': 'Alanlarım',
@@ -135,7 +137,7 @@
 
   }
 
-  // Yıl (eleman varsa)
+  // Yıl
   const yEl = byId('y');
   if (yEl) yEl.textContent = new Date().getFullYear();
 
@@ -197,6 +199,30 @@
     tick();
   }
 
-  // Dili en sona koy ki diğerleri hazır olsun
+  // CV Modal
+  const modal = byId('cv-modal');
+  const btnPreview = byId('btn-cv-preview');
+  const span = $('.close-modal');
+
+  if (btnPreview && modal && span) {
+    btnPreview.addEventListener('click', (e) => {
+      e.preventDefault();
+      modal.style.display = "block";
+      document.body.style.overflow = "hidden"; // Disable scroll
+    });
+
+    span.addEventListener('click', () => {
+      modal.style.display = "none";
+      document.body.style.overflow = "auto"; // Enable scroll
+    });
+
+    window.addEventListener('click', (event) => {
+      if (event.target == modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+    });
+  }
+
   setupLanguageSwitch();
 })();

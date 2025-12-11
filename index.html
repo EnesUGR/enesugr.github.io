@@ -33,7 +33,6 @@
         <a href="#resume" id="nav-resume">Resume</a>
       </nav>
 
-      <!-- dil seçimi -->
       <div class="lang-switch">
         <button class="lang-btn lang-active" data-lang="en">
           <img src="assets/flags/gb.svg" alt="English" />
@@ -52,8 +51,11 @@
     </div>
   </header>
 
+
+
+
   <main id="top" class="container">
-    <!-- Hero -->
+
     <section class="hero" aria-labelledby="hero-title">
       <div>
         <h1 class="h1" id="hero-title">Hello, I am Enes</h1>
@@ -69,7 +71,6 @@
       <div class="hero-art" role="img" aria-label="Geometric blue background"></div>
     </section>
 
-    <!-- About -->
     <section id="about" aria-labelledby="about-title">
       <h2 class="section-title" id="about-title">Who am I?</h2>
       <div class="about">
@@ -108,7 +109,6 @@
       </div>
     </section>
 
-    <!-- Fields -->
     <section id="fields" aria-labelledby="fields-title">
       <h2 class="section-title" id="fields-title">My Fields</h2>
       <div class="grid">
@@ -164,7 +164,6 @@
       </div>
     </section>
 
-    <!-- Resume -->
     <section id="resume" aria-labelledby="resume-title">
       <div class="cta-wrap">
         <h3 id="resume-title">My Resume</h3>
@@ -172,13 +171,13 @@
           includes detailed
           project history and technical skills.</p>
         <div class="actions" style="justify-content:center;">
-          <a class="btn primary" id="dlcv-bot" href="assets/CV_EnesUgur.pdf" download="CV_EnesUgur.pdf">Download My
+          <a class="btn primary" id="btn-cv-bottom" href="assets/CV_EnesUgur.pdf" download="CV_EnesUgur.pdf">Download My
             CV</a>
+          <a class="btn" id="btn-cv-preview" href="assets/CV_EnesUgur.pdf" target="_blank">Preview CV</a>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact" aria-labelledby="contact-title">
       <h2 class="section-title" id="contact-title">Contact</h2>
       <div class="contact-box">
@@ -199,6 +198,8 @@
     </section>
   </main>
 
+
+
   <footer>
     <div class="container foot">
       <small id="footer-copy">© 2025 Created by Enes Ugur<br>All Rights Reserved</small>
@@ -210,6 +211,17 @@
       </div>
     </div>
   </footer>
+
+
+
+  <div id="cv-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <iframe src="assets/CV_EnesUgur.pdf" title="CV Preview"></iframe> 
+      <!-- CV >> 1.11.2025 -->
+    </div>
+  </div>
+
 </body>
 
 </html>

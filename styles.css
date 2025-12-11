@@ -25,7 +25,7 @@ body {
   margin: 0;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--text);
-  background: radial-gradient(1200px 600px at 80% -10%, #123 0%, transparent 60%), var(--bg);
+  background: radial-gradient(1200px 600px at 80% -10%, #123 0%, transparent 60%) no-repeat, var(--bg);
   line-height: 1.6;
 }
 
@@ -48,7 +48,7 @@ img {
 
 /* Dil seçimi */
 .lang-btn {
-  border: 1px solid rgba(148,163,184,.3);
+  border: 1px solid rgba(148, 163, 184, .3);
   background: transparent;
   border-radius: 999px;
   cursor: pointer;
@@ -65,7 +65,7 @@ img {
 .lang-btn.lang-active {
   background: var(--primary);
   border-color: transparent;
-  box-shadow: 0 0 6px rgba(59,130,246,0.5);
+  box-shadow: 0 0 6px rgba(59, 130, 246, 0.5);
 }
 
 
@@ -453,7 +453,7 @@ footer {
 }
 
 .lang-btn {
-  border: 1px solid rgba(148,163,184,.3);
+  border: 1px solid rgba(148, 163, 184, .3);
   background: transparent;
   color: var(--muted);
   font-size: 12px;
@@ -469,13 +469,98 @@ footer {
   border-color: transparent;
 }
 
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s;
+}
+
+.modal-content {
+  background-color: var(--surface);
+  margin: 4vh auto;
+  padding: 20px;
+  border: 1px solid rgba(148, 163, 184, .12);
+  width: 90%;
+  max-width: 1000px;
+  height: 90vh;
+  border-radius: var(--radius);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  animation: slideIn 0.3s;
+}
+
+.close-modal {
+  color: var(--muted);
+  align-self: flex-end;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+  margin-bottom: 10px;
+  transition: color 0.2s;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.modal-content iframe {
+  flex-grow: 1;
+  border: none;
+  border-radius: 8px;
+  background: #fff;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 @media (max-width:640px) {
   .lang-switch {
     margin-right: 6px;
   }
+
   .lang-btn {
     padding: 3px 6px;
     font-size: 11px;
+  }
+
+  .modal-content {
+    width: 95%;
+    height: 80vh;
+    margin: 10vh auto;
   }
 }
 
