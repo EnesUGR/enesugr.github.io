@@ -1,15 +1,16 @@
 :root {
-  --bg: #0c111a;
-  --surface: #111827;
-  --surface-2: #0f172a;
-  --muted: #94a3b8;
-  --text: #e5e7eb;
-  --primary: #3b82f6;
-  --primary-600: #2563eb;
-  --ring: #60a5fa;
-  --card: #0b1220;
+  --bg: #0d0d0d;
+  --surface: #151515;
+  --surface-2: #1a1a1a;
+  --muted: #a0a0a0;
+  --text: #ffffff;
+  --primary: #00bcd4;
+  --primary-600: #0097a7;
+  --ring: rgba(0, 188, 212, 0.2);
+  --card: #121212;
   --radius: 16px;
   --container: 1120px;
+  --border: rgba(255, 255, 255, 0.1);
 }
 
 * {
@@ -25,7 +26,7 @@ body {
   margin: 0;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--text);
-  background: radial-gradient(1200px 600px at 80% -10%, #123 0%, transparent 60%) no-repeat, var(--bg);
+  background: radial-gradient(1200px 600px at 80% -10%, rgba(0, 188, 212, 0.05) 0%, transparent 60%) no-repeat, var(--bg);
   line-height: 1.6;
 }
 
@@ -48,7 +49,7 @@ img {
 
 /* Dil seçimi */
 .lang-btn {
-  border: 1px solid rgba(148, 163, 184, .3);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   background: transparent;
   border-radius: 999px;
   cursor: pointer;
@@ -65,7 +66,6 @@ img {
 .lang-btn.lang-active {
   background: var(--primary);
   border-color: transparent;
-  box-shadow: 0 0 6px rgba(59, 130, 246, 0.5);
 }
 
 
@@ -76,7 +76,7 @@ img {
   z-index: 50;
   backdrop-filter: saturate(140%) blur(8px);
   background: color-mix(in oklab, var(--bg) 75%, transparent);
-  border-bottom: 1px solid rgba(148, 163, 184, .12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav {
@@ -117,14 +117,16 @@ img {
   padding: 10px 14px;
   border-radius: 10px;
   background: var(--primary);
-  color: #fff !important;
+  color: #000 !important;
   font-weight: 600;
   border: none;
-  transition: background .2s;
+  transition: all .25s ease;
 }
 
 .cta:hover {
   background: var(--primary-600);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 188, 212, 0.2);
 }
 
 /* Mobile nav */
@@ -170,25 +172,29 @@ img {
 .btn {
   padding: 12px 16px;
   border-radius: 12px;
-  border: 1px solid rgba(148, 163, 184, .18);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   background: linear-gradient(180deg, rgba(255, 255, 255, .03), rgba(255, 255, 255, .01));
   color: var(--text);
   font-weight: 600;
-  transition: border-color .2s;
+  transition: all .25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn:hover {
-  border-color: rgba(148, 163, 184, .32);
+  border-color: rgba(255, 255, 255, 0.45);
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .btn.primary {
   background: var(--primary);
   border-color: transparent;
-  color: #fff;
+  color: #000;
 }
 
 .btn.primary:hover {
   background: var(--primary-600);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 188, 212, 0.25);
 }
 
 /* Hero visual */
@@ -198,10 +204,10 @@ img {
   height: 412px;
   border-radius: 20px;
   background:
-    radial-gradient(220px 140px at 30% 30%, #245 0%, transparent 60%),
-    linear-gradient(135deg, #1f2a44, #2b375e 40%, #2e3f74);
-  border: 1px solid rgba(148, 163, 184, .18);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .06), 0 10px 30px rgba(0, 0, 0, .35);
+    radial-gradient(220px 140px at 30% 30%, rgba(0, 242, 255, 0.15) 0%, transparent 60%),
+    linear-gradient(135deg, #121212, #1a1a1a 40%, #222222);
+  border: 1px solid var(--border);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .06), 0 10px 30px rgba(0, 0, 0, .4);
   backdrop-filter: blur(8px) saturate(120%);
   -webkit-backdrop-filter: blur(8px) saturate(120%);
 }
@@ -234,7 +240,7 @@ section {
 /* About */
 .about {
   background: var(--surface-2);
-  border: 1px solid rgba(148, 163, 184, .14);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius);
   padding: 22px;
 }
@@ -251,7 +257,7 @@ section {
   height: 76px;
   border-radius: 50%;
   overflow: hidden;
-  border: 1px solid rgba(148, 163, 184, .22);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -282,9 +288,17 @@ section {
   padding: 8px 12px;
   background: var(--surface);
   color: #cbd5e1;
-  border: 1px solid rgba(148, 163, 184, .18);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 10px;
   font-weight: 600;
+  transition: all .25s ease;
+}
+
+.chip:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+  background: rgba(0, 188, 212, 0.05);
 }
 
 /* Fields */
@@ -296,7 +310,7 @@ section {
 
 .card {
   background: var(--card);
-  border: 1px solid rgba(148, 163, 184, .12);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius);
   padding: 18px;
   min-height: 150px;
@@ -308,7 +322,7 @@ section {
 
 .card:hover {
   transform: translateY(-2px);
-  border-color: rgba(148, 163, 184, .28);
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
 .card h4 {
@@ -327,14 +341,14 @@ section {
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  background: rgba(59, 130, 246, .1);
-  border: 1px solid rgba(59, 130, 246, .35);
+  background: rgba(0, 242, 255, .1);
+  border: 1px solid rgba(0, 242, 255, .35);
 }
 
 /* Resume */
 .cta-wrap {
   background: var(--surface-2);
-  border: 1px solid rgba(148, 163, 184, .14);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius);
   padding: 28px;
   text-align: center;
@@ -348,7 +362,7 @@ section {
 /* Contact */
 .contact-box {
   background: var(--surface-2);
-  border: 1px solid rgba(148, 163, 184, .14);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius);
   padding: 32px;
   text-align: center;
@@ -389,7 +403,7 @@ section {
 footer {
   padding: 32px 0 60px;
   color: var(--muted);
-  border-top: 1px solid rgba(148, 163, 184, .12);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   margin-top: 40px;
 }
 
@@ -453,7 +467,7 @@ footer {
 }
 
 .lang-btn {
-  border: 1px solid rgba(148, 163, 184, .3);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   background: transparent;
   color: var(--muted);
   font-size: 12px;
@@ -489,7 +503,7 @@ footer {
   background-color: var(--surface);
   margin: 4vh auto;
   padding: 20px;
-  border: 1px solid rgba(148, 163, 184, .12);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   width: 90%;
   max-width: 1000px;
   height: 90vh;
@@ -595,7 +609,7 @@ footer {
     right: 0;
     padding: 12px 24px;
     background: var(--surface-2);
-    border-bottom: 1px solid rgba(148, 163, 184, .14);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   }
 
   .menu-btn {
