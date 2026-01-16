@@ -1,37 +1,68 @@
-## [3.1.0] - 10/11/2025
+# Portfolio Website
 
-- Multilingual support and language switcher have been added to the portfolio site.
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Active-brightgreen?style=flat-square&logo=github)](https://enesugr.github.io)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-## [3.0.1] - 02/11/2025
+A modern, responsive personal portfolio website showcasing my skills and experience as a Mechatronics Engineering student.
 
-- Improvements have been made for mobile-friendly design.
+🔗 **Site:** [enesugr.github.io](https://enesugr.github.io)
 
-## [3.0.0] - 01/11/2025
+---
 
-- A brand new design has been introduced and the content information has been updated to its correct form.
+## ✨ Features
 
-## [2.0.3] - 25/06/2024
+- 🌐 **Multilingual Support** – English and Turkish language options with seamless switching
+- 📱 **Fully Responsive** – Optimized for all devices (desktop, tablet, mobile)
+- 🎨 **Modern Design** – Clean, glassmorphism-inspired UI with smooth animations
+- 📄 **CV Section** – Download or preview CV directly from the website
+- 🔗 **Social Integration** – Links to LinkedIn, GitHub, StackOverflow, ORCID, ResearchGate, and Instagram
+- ⚡ **Fast Loading** – Lightweight, no framework dependencies
 
-- Development site address has been changed.
-- Readme.md file has been edited.
+---
 
-## [2.0.2] - 03/06/2023
+## 🛠️ Technologies Used
 
-- Typed script added to homepage.
+| Technology | Purpose |
+|------------|---------|
+| HTML5 | Structure and semantic markup |
+| CSS3 | Styling, animations, and responsive design |
+| JavaScript | Dynamic content, typewriter effect, language switching |
+| [Font Awesome](https://fontawesome.com/) | Icons |
+| [Google Fonts (Inter)](https://fonts.google.com/specimen/Inter) | Typography |
 
-## [2.0.1] - 26/05/2023
+---
 
-- Minor adjustments were made.
+## 📂 Project Structure
 
-## [2.0] - 23/05/2023
+```
+enesugr.github.io/
+├── index.html          # Main portfolio page
+├── gizlilik.html       # Privacy policy page (Turkish)
+├── styles.css          # All styling and animations
+├── script.js           # JavaScript functionality
+├── assets/
+│   ├── CV_EnesUgur.pdf # Downloadable CV
+│   ├── favicon.ico     # Website favicon
+│   ├── logo.svg        # Logo asset
+│   └── flags/          # Language flag icons
+│       ├── gb.svg
+│       └── tr.svg
+└── README.md           # This file
+```
 
-- New design added.
+---
 
-## [1.1] - 12/03/2023
 
-- Added Glass effect and changed the background color.
-- Added temporary lorem paragraph.
+## 📬 Contact
 
-## [1.0] - 11/03/2023
+- **Email:** [ugurenes.tr@gmail.com](mailto:ugurenes.tr@gmail.com)
+- **LinkedIn:** [linkedin.com/in/enesugur](https://www.linkedin.com/in/enesugur/)
+- **GitHub:** [github.com/EnesUGR](https://github.com/EnesUGR)
 
-- Added first design.
+---
+
+##  License
+
+© 2025 Enes Ugur. All Rights Reserved.
