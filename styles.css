@@ -279,27 +279,62 @@ section {
   color: var(--muted);
 }
 
-.chip-row {
+.about-btns {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.social-side {
   display: flex;
   gap: 8px;
 }
 
-.chip {
-  padding: 8px 12px;
+.social-side a {
+  min-width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 14px;
   background: var(--surface);
-  color: #cbd5e1;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 10px;
-  font-weight: 600;
-  transition: all .25s ease;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--muted);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.chip:hover {
+.social-side a i {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.social-side a span {
+  font-size: 0.95rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Icon-only buttons (LinkedIn, GitHub) shouldn't have extra padding */
+.social-side a:not(:has(span)) {
+  padding: 0;
+  width: 44px;
+}
+
+.social-side a:hover {
   border-color: var(--primary);
   color: var(--primary);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   background: rgba(0, 188, 212, 0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+
+/* Social buttons consistent style across all links in social-side */
+
+/* Old chips removed or renamed to keep generic if needed elsewhere, but mainly handled by new btns above */
 
 /* Fields */
 .grid {
@@ -603,13 +638,17 @@ footer {
 
   .menu.open {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
     position: absolute;
     top: 64px;
     left: 0;
     right: 0;
-    padding: 12px 24px;
+    padding: 20px 24px;
     background: var(--surface-2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
   }
 
   .menu-btn {
@@ -643,6 +682,11 @@ footer {
     height: 56px;
     margin-bottom: 4px;
     display: flex;
+  }
+
+  .about-btns {
+    justify-content: flex-start;
+    gap: 12px;
   }
 
   .about p {

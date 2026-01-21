@@ -8,6 +8,7 @@
     en: {
       'nav-about': 'About',
       'nav-fields': 'My Fields',
+      'footer-dev': 'Software Portfolio',
       'nav-resume': 'Resume',
       'nav-contact': 'Contact Me',
 
@@ -18,7 +19,8 @@
       'about-title': 'Who am I?',
       'about-role': 'Mechatronics Engineer',
       'about-text':
-        "I'm Enes, a senior Mechatronics Engineering student with a passion for robotics, automation, and software development. I'll be graduating in 2026. My interests include software-focused projects. From robotic arm simulations to embedded systems, I enjoy creating practical and innovative solutions and constantly learning about new technologies shaping the future of automation.",
+        "I am a senior Mechatronics Engineering student focusing on developing myself in software, robotics, and automation. During my university education, I reinforced my theoretical knowledge with projects by working on Python, Flutter, C#, and PLC-based systems. Industrial robots, swarm robotics systems, and automation are among my primary interests. As someone who is open to learning, thinks analytically, and aims for continuous self-improvement, I strive to create value by taking part in projects focused on mechatronics, robotics, and software.",
+      'chip-dev': 'Software Portfolio',
 
       'fields-title': 'My Fields',
       'field-python': 'Python Programming',
@@ -28,12 +30,12 @@
       'field-robotics': 'Robotics',
       'field-embedded': 'Embedded Systems',
 
-      'field-python-content': 'I develop algorithms, simulation tools, and automation scripts using libraries such as NumPy, SciPy, and Open3D for robotics, data analysis, and system modeling. I also develop database operations and desktop applications using PyQt and PySide.',
-      'field-mobile-content': 'Designing and developing cross-platform mobile applications with Flutter. Focused on creating efficient, modern, and user-friendly interfaces for engineering and productivity tools.',
-      'field-plc-content': 'Programming industrial automation systems with Siemens PLCs using TIA Portal. Experienced in ladder logic (LAD) and structured control for process control and factory automation.',
-      'field-cad-content': 'Creating 3D mechanical designs, assemblies, and manufacturing simulations using SolidWorks, CATIA, and Mastercam. Combining design precision with manufacturability.',
-      'field-robotics-content': 'Designing and simulating robotic systems with a focus on kinematics, control, and automation. Experienced in building URDF models, forward/inverse kinematics, and motion visualization.',
-      'field-embedded-content': 'Designing and programming embedded systems using Arduino microcontrollers. Focused on sensor integration, real-time control, and communication between hardware and software layers for automation and robotics applications.',
+      'field-python-content': 'I develop scalable software and simulation systems for robotics, data processing, and engineering applications using Python. I work on numerical analysis, 3D data processing, and algorithm development with libraries like NumPy, SciPy, and Open3D; and design professional database-supported desktop applications using PyQt and PySide.',
+      'field-mobile-content': 'I develop cross-platform mobile applications for iOS and Android using Flutter. I create modern user interfaces by prioritizing performance, usability, and clean design in technical and engineering projects.',
+      'field-plc-content': 'I develop industrial automation, process control, and machine software in TIA Portal environments using Siemens PLCs. I also create virtual factory and production line simulations using Factory I/O to test and validate automation scenarios before moving to real systems.',
+      'field-cad-content': 'I can create 3D drawings, surface and solid models of mechanical parts and systems using SolidWorks, CATIA, and Mastercam. I prepare functional and readable designs by focusing on dimensioning, technical drawing standards, assembly relationships, and design details.',
+      'field-robotics-content': 'I work on mechanical structure, kinematic modeling, and motion analysis in robotic systems. I analyze the workspace and movement capabilities of robots with forward and inverse kinematic calculations and visualize them in simulation environments.',
+      'field-embedded-content': 'I develop solutions that handle hardware and software together in Arduino-based embedded systems. I work on real-time control, automation, and robotics applications with sensors, actuators, and communication protocols.',
 
       'resume-title': 'My Resume',
       'resume-text':
@@ -54,6 +56,7 @@
     tr: {
       'nav-about': 'Hakkımda',
       'nav-fields': 'Alanlarım',
+      'footer-dev': 'Yazılım Portföyü',
       'nav-resume': 'Özgeçmiş',
       'nav-contact': 'İletişime Geç',
 
@@ -64,7 +67,8 @@
       'about-title': 'Ben kimim?',
       'about-role': 'Mekatronik Mühendisi',
       'about-text':
-        'Ben Enes, robotik, otomasyon ve yazılım geliştirme alanlarına ilgi duyan son sınıf Mekatronik Mühendisliği öğrencisiyim. 2026 yılında mezun olacağım. İlgi alanlarım ağırlıklı olarak yazılım odaklı projeler. Robot kol simülasyonlarından gömülü sistemlere kadar pratik ve yenilikçi çözümler üretmeyi seviyor, otomasyonun geleceğini şekillendiren yeni teknolojileri öğrenmeye devam ediyorum.',
+        'Mekatronik Mühendisliği son sınıf öğrencisiyim. Yazılım, robotik ve otomasyon alanlarında kendimi geliştirmeye odaklanıyorum. Üniversite eğitimim süresince Python, Flutter, C# ve PLC tabanlı sistemler üzerine çalışarak teorik bilgimi projelerle pekiştirdim. Endüstriyel robotlar, sürü robotik sistemler ve otomasyon ilgi duyduğum başlıca alanlar arasında yer alıyor. Öğrenmeye açık, analitik düşünen ve sürekli kendini geliştirmeyi hedefleyen biri olarak; mekatronik, robotik ve yazılım odaklı projelerde yer alarak katma değer üretmeyi amaçlıyorum.',
+      'chip-dev': 'Yazılım Portföyü',
 
       'fields-title': 'Alanlarım',
       'field-python': 'Python Programlama',
@@ -74,12 +78,12 @@
       'field-robotics': 'Robotik',
       'field-embedded': 'Gömülü Sistemler',
 
-      'field-python-content': 'NumPy, SciPy ve Open3D gibi kütüphaneleri kullanarak robotik, veri analizi ve sistem modelleme için algoritmalar, simülasyon araçları ve otomasyon komut dosyaları geliştiriyorum. Ayrıca PyQt ve PySide kullanarak veritabanı işlemleri ve masaüstü uygulamaları geliştiriyorum.',
-      'field-mobile-content': 'Flutter ile çapraz platform mobil uygulamalar tasarlamak ve geliştirmek. Mühendislik ve üretkenlik araçları için verimli, modern ve kullanıcı dostu arayüzler oluşturmaya odaklanmak.',
-      'field-plc-content': 'TIA Portal kullanarak Siemens PLC\'lerle endüstriyel otomasyon sistemleri programlıyorum. Proses kontrolü ve fabrika otomasyonu için ladder mantığı (LAD) ve yapılandırılmış kontrol konusunda deneyimliyim.',
-      'field-cad-content': 'SolidWorks, CATIA ve Mastercam kullanarak 3D mekanik tasarımlar, montajlar ve üretim simülasyonları oluşturmak. Tasarım hassasiyetini üretilebilirlikle birleştirmek.',
-      'field-robotics-content': 'Kinematik, kontrol ve otomasyona odaklanarak robotik sistemlerin tasarımı ve simülasyonu. URDF modelleri, ileri/ters kinematik ve hareket görselleştirme konusunda deneyimli.',
-      'field-embedded-content': 'Arduino mikrodenetleyicileri kullanarak gömülü sistemlerin tasarımı ve programlanması. Sensör entegrasyonu, otomasyon ve robotik uygulamaları için gerçek zamanlı kontrol ve donanım ile yazılım katmanları arasındaki iletişime odaklanılmıştır.',
+      'field-python-content': 'Python ile robotik, veri işleme ve mühendislik uygulamaları için ölçeklenebilir yazılımlar ve simülasyon sistemleri geliştiriyorum. NumPy, SciPy ve Open3D gibi kütüphanelerle sayısal analiz, 3D veri işleme ve algoritma geliştirme üzerine çalışıyor; PyQt ve PySide kullanarak veri tabanı destekli profesyonel masaüstü uygulamaları tasarlıyorum.',
+      'field-mobile-content': 'Flutter kullanarak iOS ve Android platformları için tek kod tabanlı mobil uygulamalar geliştiriyorum. Teknik ve mühendislik projelerinde performans, kullanılabilirlik ve sade tasarımı ön planda tutarak modern kullanıcı arayüzleri oluşturuyorum.',
+      'field-plc-content': 'Siemens PLC’ler ile TIA Portal ortamında endüstriyel otomasyon, proses kontrolü ve makine yazılımları geliştiriyorum. Aynı zamanda Factory I/O kullanarak sanal fabrika ve üretim hattı simülasyonları oluşturuyor; otomasyon senaryolarını gerçek sisteme geçmeden önce test ve doğrulama imkânı sağlıyorum.',
+      'field-cad-content': 'SolidWorks, CATIA, Mastercam kullanarak mekanik parçaların ve sistemlerin 3D çizimlerini, yüzey ve katı modellerini oluşturabiliyorum. Ölçülendirme, teknik resim standartları, montaj ilişkileri ve tasarım detaylarına odaklanarak fonksiyonel ve okunabilir tasarımlar hazırlıyorum.',
+      'field-robotics-content': 'Robotik sistemlerde mekanik yapı, kinematik modelleme ve hareket analizi üzerine çalışıyorum. İleri ve ters kinematik hesaplamalar ile robotların çalışma uzayını ve hareket kabiliyetlerini analiz ediyor simülasyon ortamında görselleştiriyorum. Gerçek sisteme geçmeden önce hareket doğrulama, çarpışma farkındalığı ve kontrol senaryolarının test edilmesine odaklanıyorum.',
+      'field-embedded-content': 'Arduino tabanlı gömülü sistemlerde donanım ve yazılımı birlikte ele alan çözümler geliştiriyorum. Sensörler, aktüatörler ve haberleşme protokolleri ile gerçek zamanlı kontrol, otomasyon ve robotik uygulamalar üzerinde çalışıyorum.',
 
       'resume-title': 'Özgeçmişim',
       'resume-text':
