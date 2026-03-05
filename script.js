@@ -46,7 +46,7 @@
       'contact-title': 'Contact',
       'contact-text': "Let’s get in touch!",
 
-      'footer-copy': '© 2025 Created by Enes Ugur\nAll Rights Reserved',
+      'footer-copy': '© 2025 - Created by Enes Ugur\nAll Rights Reserved',
       'footer-home': 'Home',
       'footer-about': 'About',
       'footer-fields': 'My Fields',
@@ -94,7 +94,7 @@
       'contact-title': 'İletişim',
       'contact-text': 'Benimle iletişime geç!',
 
-      'footer-copy': '© 2025 Enes Uğur\nTüm hakları saklıdır',
+      'footer-copy': '© 2025 - Enes Uğur tarafından geliştirilmiştir.\nTüm hakları saklıdır',
       'footer-home': 'Ana Sayfa',
       'footer-about': 'Hakkımda',
       'footer-fields': 'Alanlarım',
